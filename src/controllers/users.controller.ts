@@ -1,10 +1,18 @@
 import { NextFunction, Request, Response } from 'express';
-import { Container } from 'typedi'
+import { Container } from 'typedi';
 import { User } from '@interfaces/users.interface';
 import { UserService } from '@services/users.service';
 
 export class UserController {
   public user = Container.get(UserService);
+
+  public getHome = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    try {
+      res.status(200).send('Hello There');
+    } catch (error) {
+      next(error);
+    }
+  };
 
   public getUsers = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
