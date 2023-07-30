@@ -18,7 +18,10 @@
   },
   "homepage": "https://github.com/tiengtinh/express-aws-2-tiers-demo#readme",
   "dependencies": {
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
+    "knex": "^2.5.1",
+    "mysql2": "^3.5.2",
     "ts-node": "^10.9.1"
   },
   "devDependencies": {
